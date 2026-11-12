@@ -1,0 +1,15 @@
+# TEMPLATE FOR A SEPARATE SCHEDULER PROJECT ONLY.
+# Never replace the inventory website's existing .replit with this file.
+modules = ["nodejs-20"]
+run = "node trigger.mjs --check"
+
+[deployment]
+deploymentTarget = "scheduled"
+run = ["node", "trigger.mjs"]
+
+# Set the schedule in Publishing, not in this template:
+# Cron: 0 7 * * 1
+# Time zone: America/New_York
+# Job timeout: 180 seconds
+#
+# The job defaults to disabled when INVENTORY_SCHEDULE_ENABLED is unset.
